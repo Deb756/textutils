@@ -3,9 +3,9 @@ import "./App.css";
 import Navbar from "./ComponentsCWH/Navbar";
 import TextForm from "./ComponentsCWH/TextForm";
 import Alert from "./ComponentsCWH/Alert";
-import About from "./ComponentsCWH/About";
+// import About from "./ComponentsCWH/About";
 // importing router here
-import { BrowserRouter,Route,Routes } from "react-router-dom";
+// import { BrowserRouter,Route,Routes } from "react-router-dom";
 
 
 function App() {
@@ -49,24 +49,25 @@ function App() {
   return (
     // Here the below is a jsx fragment which we used to add html,css,js in react
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter> */}
       {/* here bellow m passing (props) through title="TextUtils" bcz i wanna change some properties it dynamically */}
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
       {/* <About /> */}
       {/* <Navbar  /> */}
       <div className="container">
-        <Routes>
+        {/* <Routes> */}
           {/* we use (exact path here insted of path) bcz React do partial mathcing so if we want exact mathch then we can use (exact path)*/}
           {/* Forex: /user ---> Component1
                     /user/home ---->component2 */}
           {/* here if we use path for com2 then router show comp1 so we have to use (exact path) */}
-          <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/" element={<TextForm heading="Enter The Text To Annalize" mode={mode} showAlert={showAlert} toggleMode={toggleMode} />}/>
+          {/* <Route exact path="/about" element={<About/>}/> */}
+          {/* <Route exact path="/" element={<TextForm heading="Enter The Text To Annalize" mode={mode} showAlert={showAlert} toggleMode={toggleMode} />}/> */}
+          <TextForm heading="Enter The Text To Annalize" mode={mode} showAlert={showAlert} toggleMode={toggleMode} />
         
-        </Routes>
+        {/* </Routes> */}
       </div>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </>
   );
 }

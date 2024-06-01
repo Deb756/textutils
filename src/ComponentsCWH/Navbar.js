@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // here we have to import proptypes to use props
 import PropTypes from "prop-types";
 // rfc for React function baased component
@@ -12,12 +12,12 @@ export default function Navbar(props) {
         <div className="container-fluid">
           {/* here i passed the (props) from app.js */}
 
-          <Link className="navbar-brand" to="/">
+          {/* <Link className="navbar-brand" to="/">
             {props.title}
-          </Link>
-          {/* <a className="navbar-brand" href="/">
+          </Link> */}
+          <a className="navbar-brand" href="/">
             {props.title}
-          </a> */}
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -32,14 +32,14 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/about">
+                {/* <a className="nav-link active" aria-current="page" href="/about">
                   {props.about}
-                </Link>
+                </a> */}
               </li>
               
             </ul>
